@@ -20,8 +20,10 @@ namespace GepteremProjekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        PetrikLajosSzg petrik; 
         public MainWindow()
         {
+            petrik = new PetrikLajosSzg("petrikgepek.txt");
             InitializeComponent();
         }
     }
