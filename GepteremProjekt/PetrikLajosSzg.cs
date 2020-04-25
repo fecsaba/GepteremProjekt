@@ -23,7 +23,6 @@ namespace GepteremProjekt
 			try
 			{
 				StreamReader reader = new StreamReader(fileName);
-				string sor;
 				while (!reader.EndOfStream)
 				{
 					string nev = reader.ReadLine();
@@ -36,7 +35,7 @@ namespace GepteremProjekt
 					while ((gepSor = reader.ReadLine()) != "")
 					{
 						sorTomb = gepSor.Split(';');
-						for (int i = 0; i < oszlopokSzama-1; i++)
+						for (int i = 0; i < oszlopokSzama; i++)
 						{
 							ertekelesek[j, i] = int.Parse(sorTomb[i]);
 						}
@@ -53,7 +52,6 @@ namespace GepteremProjekt
 				MessageBox.Show(e.ToString());
 				Environment.Exit(0);
 			}
-
 		}
 	}
 }

@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace GepteremProjekt
 {
-    class Gepterem
+    public class Gepterem
     {
 		private int[,] ertekeles;
 		private int helyDb;
@@ -46,5 +46,20 @@ namespace GepteremProjekt
 			this.ertekeles = ertekeles;
 		}
 
+		public double Avg()
+		{
+			return (from int item in ertekeles
+					where item > 0
+					select item).Average();
+			//List<int> l = new List<int>();
+			//foreach (var item in ertekeles)
+			//{
+			//	if (item > 0)
+			//	{
+			//		l.Add(item);
+			//	}
+			//}
+			//return l.Average();
+		}
 	}
 }
