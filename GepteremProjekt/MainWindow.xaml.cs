@@ -141,7 +141,7 @@ namespace GepteremProjekt
         private void ChangeTitle()
         {
 
-            Win.Title = $"{Petrik.Geptermek[ActualRoom].Nev} | Average: " + String.Format("{0:00.##}", Petrik.Geptermek[ActualRoom].Avg());
+            Win.Title = $"{Petrik.Geptermek[ActualRoom].Nev} | Average: " + String.Format("{0:0.##}", Petrik.Geptermek[ActualRoom].Avg());
         }
 
         private void win_Loaded(object sender, RoutedEventArgs e)
